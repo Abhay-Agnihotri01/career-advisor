@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from career_recommendation.recommendation_engine import CareerRecommendationEngine
 from skill_analysis.skill_analyzer import SkillAnalyzer
 from chatbot.career_chatbot import CareerChatbot
+from personality_analysis.personality_analyzer import app as personality_app
 
 load_dotenv()
 
@@ -59,6 +60,9 @@ class SkillGap(BaseModel):
 class ChatMessage(BaseModel):
     message: str
     user_context: Optional[Dict] = None
+
+class PersonalityResponse(BaseModel):
+    responses: Dict[int, str]
 
 @app.get("/")
 async def root():

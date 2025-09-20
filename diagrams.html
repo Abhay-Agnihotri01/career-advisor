@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advisor - System Diagrams</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .diagram-section {
+            padding: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .diagram-section:last-child {
+            border-bottom: none;
+        }
+        .diagram-title {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .flow-step {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(116, 185, 255, 0.3);
+        }
+        .flow-step::after {
+            content: '↓';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #74b9ff;
+        }
+        .flow-step:last-child::after {
+            display: none;
+        }
+        .flow-step h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+        }
+        .flow-step p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .use-case-diagram {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            margin: 40px 0;
+        }
+        .actor {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .actor-figure {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #3498db;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        .actor-figure::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: #2c3e50;
+        }
+        .actor-figure::after {
+            content: '';
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: #2c3e50;
+        }
+        .system-boundary {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 450px;
+            border: 3px solid #2c3e50;
+            border-radius: 15px;
+            background: rgba(52, 152, 219, 0.05);
+        }
+        .system-title {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .use-case {
+            position: absolute;
+            background: #fff;
+            border: 2px solid #00b894;
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 11px;
+            text-align: center;
+            color: #2c3e50;
+            min-width: 120px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .connection {
+            position: absolute;
+            height: 1px;
+            background: #74b9ff;
+            z-index: 1;
+        }
+        .user-actor {
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .admin-actor {
+            right: 50px;
+            top: 25%;
+        }
+        .ai-actor {
+            right: 50px;
+            bottom: 25%;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .tech-stack h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .tech-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tech-item h4 {
+            color: #3498db;
+            margin: 0 0 10px 0;
+        }
+        .tech-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Career Advisor System</h1>
+            <p>AI-Powered Career Guidance Platform - System Architecture & Use Cases</p>
+        </div>
+
+        <div class="diagram-section">
+            <h2 class="diagram-title">Process Flow Diagram</h2>
+            <div class="process-flow">
+                <div class="flow-step">
+                    <h3>User Registration & Profile Creation</h3>
+                    <p>User creates account and fills profile with skills, interests, education, and experience</p>
+                </div>
+                <div class="flow-step">
+                    <h3>Career Assessment</h3>
+                    <p>System analyzes user profile and conducts skill gap analysis using AI services</p>
+                </div>
+                <div class="flow-step">
+                    <h3>AI-Powered Recommendations</h3>
+                    <p>ML algorithms generate personalized career recommendations and learning paths</p>
+                </div>
+                <div class="flow-step">
+                    <h3>Interactive Chatbot Consultation</h3>
+                    <p>Users interact with AI chatbot for career guidance and specific questions</p>
+                </div>
+                <div class="flow-step">
+                    <h3>Job Market Forecasting</h3>
+                    <p>System provides job market trends and future demand predictions</p>
+                </div>
+                <div class="flow-step">
+                    <h3>Dashboard & Progress Tracking</h3>
+                    <p>Users monitor their career development progress and update profiles</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="diagram-section">
+            <h2 class="diagram-title">Use Case Diagram</h2>
+            <div class="use-case-diagram">
+                <!-- Actors -->
+                <div class="actor user-actor">
+                    <div class="actor-figure"></div>
+                    <span>User</span>
+                </div>
+                <div class="actor admin-actor">
+                    <div class="actor-figure"></div>
+                    <span>Admin</span>
+                </div>
+                <div class="actor ai-actor">
+                    <div class="actor-figure"></div>
+                    <span>AI System</span>
+                </div>
+                
+                <!-- System Boundary -->
+                <div class="system-boundary">
+                    <div class="system-title">Career Advisor System</div>
+                    
+                    <!-- Use Cases -->
+                    <div class="use-case" style="top: 40px; left: 50px;">Register/Login</div>
+                    <div class="use-case" style="top: 40px; right: 50px;">Create Profile</div>
+                    <div class="use-case" style="top: 100px; left: 50px;">Take Assessment</div>
+                    <div class="use-case" style="top: 100px; right: 50px;">View Recommendations</div>
+                    <div class="use-case" style="top: 160px; left: 50px;">Chat with Bot</div>
+                    <div class="use-case" style="top: 160px; right: 50px;">View Job Forecasts</div>
+                    <div class="use-case" style="top: 220px; left: 50px;">Track Progress</div>
+                    <div class="use-case" style="top: 220px; right: 50px;">Update Profile</div>
+                    <div class="use-case" style="top: 280px; left: 80px;">Manage Users</div>
+                    <div class="use-case" style="top: 280px; right: 80px;">View Analytics</div>
+                    <div class="use-case" style="top: 340px; left: 30px;">Generate ML Insights</div>
+                    <div class="use-case" style="top: 340px; right: 30px;">Process Recommendations</div>
+                </div>
+                
+                <!-- Connection Lines -->
+                <div class="connection" style="left: 130px; top: 50%; width: 220px;"></div>
+                <div class="connection" style="right: 130px; top: 30%; width: 150px;"></div>
+                <div class="connection" style="right: 130px; bottom: 30%; width: 150px;"></div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>Technology Stack Architecture</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Frontend</h4>
+                    <p>React.js, Vite, Tailwind CSS, React Router</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Backend API</h4>
+                    <p>Spring Boot, Java, REST APIs, JPA/Hibernate</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI Services</h4>
+                    <p>FastAPI, Python, OpenAI GPT, Machine Learning</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Database</h4>
+                    <p>H2 Database, JPA Repository Pattern</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Integration</h4>
+                    <p>REST APIs, CORS, JSON Data Exchange</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Deployment</h4>
+                    <p>Local Development, Docker Ready, Cloud Scalable</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>>
+                <div class="tech-item">
+                    <h4>Backend API</h4>
+                    <p>Spring Boot, Java, REST APIs, JPA/Hibernate</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI Services</h4>
+                    <p>FastAPI, Python, OpenAI GPT, Machine Learning</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Database</h4>
+                    <p>H2 Database, JPA Repository Pattern</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Integration</h4>
+                    <p>REST APIs, CORS, JSON Data Exchange</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Deployment</h4>
+                    <p>Local Development, Docker Ready, Cloud Scalable</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

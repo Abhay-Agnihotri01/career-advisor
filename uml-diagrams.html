@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advisor - UML Diagrams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .diagram-section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .diagram-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        svg {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        .process-step {
+            fill: #3498db;
+            stroke: #2980b9;
+            stroke-width: 2;
+        }
+        .process-text {
+            fill: white;
+            font-family: Arial;
+            font-size: 12px;
+            text-anchor: middle;
+        }
+        .actor-head {
+            fill: none;
+            stroke: #2c3e50;
+            stroke-width: 2;
+        }
+        .actor-body {
+            stroke: #2c3e50;
+            stroke-width: 2;
+        }
+        .actor-text {
+            fill: #2c3e50;
+            font-family: Arial;
+            font-size: 12px;
+            text-anchor: middle;
+            font-weight: bold;
+        }
+        .system-boundary {
+            fill: rgba(52, 152, 219, 0.1);
+            stroke: #2c3e50;
+            stroke-width: 3;
+        }
+        .use-case-oval {
+            fill: white;
+            stroke: #27ae60;
+            stroke-width: 2;
+        }
+        .use-case-text {
+            fill: #2c3e50;
+            font-family: Arial;
+            font-size: 10px;
+            text-anchor: middle;
+        }
+        .connection-line {
+            stroke: #3498db;
+            stroke-width: 1;
+        }
+        .system-title {
+            fill: #2c3e50;
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .arrow {
+            fill: #3498db;
+            stroke: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Career Advisor System - UML Diagrams</h1>
+            <p>Process Flow & Use Case Diagrams</p>
+        </div>
+
+        <div class="diagram-section">
+            <h2 class="diagram-title">Process Flow Diagram</h2>
+            <svg viewBox="0 0 800 600">
+                <!-- Process Steps -->
+                <rect x="300" y="50" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="75" class="process-text">User Registration</text>
+                <text x="400" y="90" class="process-text">& Profile Creation</text>
+                
+                <rect x="300" y="140" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="165" class="process-text">Career Assessment</text>
+                <text x="400" y="180" class="process-text">& Skill Analysis</text>
+                
+                <rect x="300" y="230" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="255" class="process-text">AI-Powered</text>
+                <text x="400" y="270" class="process-text">Recommendations</text>
+                
+                <rect x="300" y="320" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="345" class="process-text">Chatbot</text>
+                <text x="400" y="360" class="process-text">Consultation</text>
+                
+                <rect x="300" y="410" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="435" class="process-text">Job Market</text>
+                <text x="400" y="450" class="process-text">Forecasting</text>
+                
+                <rect x="300" y="500" width="200" height="60" rx="10" class="process-step"/>
+                <text x="400" y="525" class="process-text">Dashboard &</text>
+                <text x="400" y="540" class="process-text">Progress Tracking</text>
+                
+                <!-- Arrows -->
+                <polygon points="400,115 395,125 405,125" class="arrow"/>
+                <line x1="400" y1="110" x2="400" y2="140" class="connection-line"/>
+                
+                <polygon points="400,205 395,215 405,215" class="arrow"/>
+                <line x1="400" y1="200" x2="400" y2="230" class="connection-line"/>
+                
+                <polygon points="400,295 395,305 405,305" class="arrow"/>
+                <line x1="400" y1="290" x2="400" y2="320" class="connection-line"/>
+                
+                <polygon points="400,385 395,395 405,395" class="arrow"/>
+                <line x1="400" y1="380" x2="400" y2="410" class="connection-line"/>
+                
+                <polygon points="400,475 395,485 405,485" class="arrow"/>
+                <line x1="400" y1="470" x2="400" y2="500" class="connection-line"/>
+            </svg>
+        </div>
+
+        <div class="diagram-section">
+            <h2 class="diagram-title">Use Case Diagram</h2>
+            <svg viewBox="0 0 900 600">
+                <!-- System Boundary -->
+                <rect x="200" y="100" width="500" height="400" rx="15" class="system-boundary"/>
+                <text x="210" y="95" class="system-title">Career Advisor System</text>
+                
+                <!-- Actors -->
+                <!-- User Actor -->
+                <circle cx="100" cy="280" r="15" class="actor-head"/>
+                <line x1="100" y1="295" x2="100" y2="340" class="actor-body"/>
+                <line x1="85" y1="315" x2="115" y2="315" class="actor-body"/>
+                <line x1="100" y1="340" x2="85" y2="365" class="actor-body"/>
+                <line x1="100" y1="340" x2="115" y2="365" class="actor-body"/>
+                <text x="100" y="380" class="actor-text">User</text>
+                
+                <!-- Admin Actor -->
+                <circle cx="800" cy="200" r="15" class="actor-head"/>
+                <line x1="800" y1="215" x2="800" y2="260" class="actor-body"/>
+                <line x1="785" y1="235" x2="815" y2="235" class="actor-body"/>
+                <line x1="800" y1="260" x2="785" y2="285" class="actor-body"/>
+                <line x1="800" y1="260" x2="815" y2="285" class="actor-body"/>
+                <text x="800" y="300" class="actor-text">Admin</text>
+                
+                <!-- AI System Actor -->
+                <circle cx="800" cy="400" r="15" class="actor-head"/>
+                <line x1="800" y1="415" x2="800" y2="460" class="actor-body"/>
+                <line x1="785" y1="435" x2="815" y2="435" class="actor-body"/>
+                <line x1="800" y1="460" x2="785" y2="485" class="actor-body"/>
+                <line x1="800" y1="460" x2="815" y2="485" class="actor-body"/>
+                <text x="800" y="500" class="actor-text">AI System</text>
+                
+                <!-- Use Cases -->
+                <ellipse cx="300" cy="150" rx="60" ry="25" class="use-case-oval"/>
+                <text x="300" y="155" class="use-case-text">Register/Login</text>
+                
+                <ellipse cx="450" cy="150" rx="60" ry="25" class="use-case-oval"/>
+                <text x="450" y="155" class="use-case-text">Create Profile</text>
+                
+                <ellipse cx="300" cy="200" rx="60" ry="25" class="use-case-oval"/>
+                <text x="300" y="205" class="use-case-text">Take Assessment</text>
+                
+                <ellipse cx="450" cy="200" rx="70" ry="25" class="use-case-oval"/>
+                <text x="450" y="205" class="use-case-text">View Recommendations</text>
+                
+                <ellipse cx="300" cy="250" rx="60" ry="25" class="use-case-oval"/>
+                <text x="300" y="255" class="use-case-text">Chat with Bot</text>
+                
+                <ellipse cx="450" cy="250" rx="70" ry="25" class="use-case-oval"/>
+                <text x="450" y="255" class="use-case-text">View Job Forecasts</text>
+                
+                <ellipse cx="300" cy="300" rx="60" ry="25" class="use-case-oval"/>
+                <text x="300" y="305" class="use-case-text">Track Progress</text>
+                
+                <ellipse cx="450" cy="300" rx="60" ry="25" class="use-case-oval"/>
+                <text x="450" y="305" class="use-case-text">Update Profile</text>
+                
+                <ellipse cx="550" cy="200" rx="60" ry="25" class="use-case-oval"/>
+                <text x="550" y="205" class="use-case-text">Manage Users</text>
+                
+                <ellipse cx="600" cy="250" rx="60" ry="25" class="use-case-oval"/>
+                <text x="600" y="255" class="use-case-text">View Analytics</text>
+                
+                <ellipse cx="350" cy="400" rx="70" ry="25" class="use-case-oval"/>
+                <text x="350" y="405" class="use-case-text">Generate Insights</text>
+                
+                <ellipse cx="500" cy="400" rx="80" ry="25" class="use-case-oval"/>
+                <text x="500" y="405" class="use-case-text">Process ML Models</text>
+                
+                <ellipse cx="350" cy="450" rx="70" ry="25" class="use-case-oval"/>
+                <text x="350" y="455" class="use-case-text">Skill Gap Analysis</text>
+                
+                <!-- Connection Lines -->
+                <!-- User connections -->
+                <line x1="115" y1="280" x2="240" y2="150" class="connection-line"/>
+                <line x1="115" y1="280" x2="390" y2="150" class="connection-line"/>
+                <line x1="115" y1="280" x2="240" y2="200" class="connection-line"/>
+                <line x1="115" y1="280" x2="380" y2="200" class="connection-line"/>
+                <line x1="115" y1="280" x2="240" y2="250" class="connection-line"/>
+                <line x1="115" y1="280" x2="380" y2="250" class="connection-line"/>
+                <line x1="115" y1="280" x2="240" y2="300" class="connection-line"/>
+                <line x1="115" y1="280" x2="390" y2="300" class="connection-line"/>
+                
+                <!-- Admin connections -->
+                <line x1="785" y1="200" x2="610" y2="200" class="connection-line"/>
+                <line x1="785" y1="220" x2="660" y2="250" class="connection-line"/>
+                
+                <!-- AI System connections -->
+                <line x1="785" y1="400" x2="420" y2="400" class="connection-line"/>
+                <line x1="785" y1="420" x2="580" y2="400" class="connection-line"/>
+                <line x1="785" y1="440" x2="420" y2="450" class="connection-line"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

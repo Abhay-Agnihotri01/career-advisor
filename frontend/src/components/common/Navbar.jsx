@@ -32,6 +32,14 @@ const Navbar = () => {
               Assessment
             </Link>
             <Link 
+              to="/personality"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive('/personality') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-700 hover:text-indigo-600'
+              }`}
+            >
+              Path Finder
+            </Link>
+            <Link 
               to="/chatbot"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive('/chatbot') ? 'text-indigo-600 bg-indigo-50' : 'text-gray-700 hover:text-indigo-600'

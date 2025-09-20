@@ -1,0 +1,146 @@
+CAREER ADVISOR VIDEO SCRIPT (3 MINUTES)
+===========================================
+
+OPENING HOOK (0:00 - 0:15)
+--------------------------
+[Scene: Split screen showing confused job seeker vs. confident professional]
+
+NARRATOR: "Are you struggling to find the right career path? Feeling lost about which skills to develop? You're not alone. 70% of professionals feel uncertain about their career direction."
+
+[Text overlay: "70% feel career uncertainty"]
+
+PROBLEM STATEMENT (0:15 - 0:45)
+--------------------------------
+[Scene: Montage of people at computers looking frustrated, outdated career counseling sessions]
+
+NARRATOR: "Traditional career guidance is outdated, generic, and expensive. Most people rely on:
+- One-size-fits-all career tests
+- Expensive human counselors with limited availability
+- Outdated job market information
+- No personalized skill development paths
+
+The result? Millions of people stuck in unfulfilling careers, wasting time and potential."
+
+[Text overlay: "The Problem: Generic, Expensive, Outdated"]
+
+SOLUTION INTRODUCTION (0:45 - 1:15)
+------------------------------------
+[Scene: Clean, modern interface of the Career Advisor platform]
+
+NARRATOR: "Introducing Career Advisor - an AI-powered platform that provides personalized career guidance and skill development recommendations. Our solution combines:
+
+- Advanced personality assessment using proven psychological models
+- Machine learning algorithms that analyze your unique profile
+- Real-time job market data and forecasting
+- Intelligent chatbot for 24/7 career guidance
+- Personalized learning paths tailored to your goals"
+
+[Screen recording: Quick tour of the main features]
+
+KEY FEATURES DEMO (1:15 - 2:15)
+--------------------------------
+
+Feature 1: Smart Assessment (1:15 - 1:30)
+NARRATOR: "First, our comprehensive assessment analyzes your personality, skills, and interests using the DISC model. Unlike generic tests, we provide detailed insights into your work style and preferences."
+
+[Show: Personality assessment interface with color-coded results]
+
+Feature 2: AI-Powered Recommendations (1:30 - 1:45)
+NARRATOR: "Our AI engine processes your profile against thousands of career paths, providing personalized recommendations with match percentages, salary ranges, and growth prospects."
+
+[Show: Career recommendations dashboard with match percentages]
+
+Feature 3: Skill Gap Analysis (1:45 - 2:00)
+NARRATOR: "We identify exactly which skills you need to develop, providing curated learning resources and realistic timelines to reach your career goals."
+
+[Show: Skill gap analysis with learning paths]
+
+Feature 4: AI Career Chatbot (2:00 - 2:15)
+NARRATOR: "Get instant answers to career questions with our intelligent chatbot, powered by OpenAI's GPT technology for contextual, personalized guidance."
+
+[Show: Chatbot conversation interface]
+
+TECHNOLOGY & INNOVATION (2:15 - 2:35)
+--------------------------------------
+[Scene: Architecture diagram animation]
+
+NARRATOR: "Built with cutting-edge technology:
+- React.js frontend for seamless user experience
+- Spring Boot backend for robust data management
+- FastAPI for lightning-fast AI processing
+- Machine learning models for accurate predictions
+- Real-time job market integration
+
+Our microservices architecture ensures scalability and reliability."
+
+[Show: Simplified architecture diagram with data flow]
+
+IMPACT & BENEFITS (2:35 - 2:50)
+--------------------------------
+[Scene: Happy professionals in various careers, success metrics]
+
+NARRATOR: "Career Advisor transforms lives by:
+- Reducing career decision time by 80%
+- Providing 24/7 accessible guidance
+- Offering personalized recommendations at scale
+- Keeping users updated with market trends
+- Creating clear, actionable development plans
+
+No more guesswork - just data-driven career success."
+
+[Text overlay: "80% faster decisions, 24/7 availability, Personalized at scale"]
+
+CALL TO ACTION (2:50 - 3:00)
+-----------------------------
+[Scene: Platform login screen, contact information]
+
+NARRATOR: "Ready to unlock your career potential? Join thousands who've found their perfect career path with Career Advisor. Start your personalized assessment today and take control of your professional future."
+
+[Text overlay: "Start Your Journey Today - CareerAdvisor.com"]
+[End screen: Logo and tagline "Your AI-Powered Career Partner"]
+
+VISUAL CUES & TECHNICAL NOTES
+==============================
+
+Screen Recordings Needed:
+1. Homepage tour (0:45-1:00)
+2. Personality assessment flow (1:15-1:30)
+3. Career recommendations dashboard (1:30-1:45)
+4. Skill gap analysis page (1:45-2:00)
+5. Chatbot interaction (2:00-2:15)
+6. Architecture diagram animation (2:15-2:35)
+
+Graphics & Animations:
+- Split screen comparisons
+- Progress bars and statistics
+- Architecture flow diagrams
+- Success metrics visualization
+- Color-coded personality results
+
+Background Music:
+- Upbeat, professional, tech-focused
+- Volume: 20% of narrator voice
+- Fade in/out at transitions
+
+Narrator Tone:
+- Professional yet approachable
+- Confident and solution-focused
+- Clear articulation
+- Moderate pace (150-160 WPM)
+
+KEY MESSAGES TO EMPHASIZE
+=========================
+1. Problem is real and widespread - Career uncertainty affects millions
+2. Solution is comprehensive - Not just another career test
+3. Technology is advanced - AI-powered, real-time, personalized
+4. Benefits are measurable - Specific improvements and outcomes
+5. Action is simple - Easy to start, immediate value
+
+SCRIPT STATISTICS
+=================
+Total Duration: 3:00 minutes
+Word Count: ~450 words
+Speaking Rate: 150 WPM
+Scene Changes: 7 major transitions
+Key Features Covered: 4 main features
+Call-to-Action: Clear and compelling
